@@ -8,14 +8,13 @@
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div class="field">
-    <%= f.check_box :Applicant %>
-    <%= f.label :Applicant %>
+<div class="field">
+  <%= f.label "Type",class: 'field'%>
+  <div class="controls">
+    <%= f.select(:type,options_for_select([['R','A']])) %>
   </div>
-  <div class="field">
-    <%= f.check_box :Recruiter %>
-    <%= f.label :Recruiter %>
-  </div>
+</div>
+
 
   <div class="field">
     <%= f.label :password %>
@@ -29,6 +28,11 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
+
+  <select name="Type">
+    <option value="Recruiter">Recruiter</option>
+    <option value="Applicant">Applicant</option>
+  </select>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
