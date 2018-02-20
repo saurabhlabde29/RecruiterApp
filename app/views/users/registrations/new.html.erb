@@ -8,11 +8,14 @@
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-<div class="field">
-  <%= f.label "Type",class: 'field'%>
-  <div class="controls">
-    <%= f.select(:type,options_for_select([['R','A']])) %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name,autocomplete: "name" %>
   </div>
+
+<div class="field">
+  <%= f.label :user_type%>
+    <%= f.select :user_type,options_for_select([['Recruiter','Recruiter'],['Applicant','Applicant']]) %>
 </div>
 
 
@@ -29,14 +32,10 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-  <select name="Type">
-    <option value="Recruiter">Recruiter</option>
-    <option value="Applicant">Applicant</option>
-  </select>
-
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
+
 <% end %>
 
-<%= render "user_session_path" %>
+<%=link_to "Login Page", "sign_up"%>

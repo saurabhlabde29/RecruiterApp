@@ -7,7 +7,10 @@ Rails.application.routes.draw do
     #root "devise/sessions#new"
     #get "sign_out", to: "devise/sessions#destroy"
   end
-  devise_for :users
+  devise_for :users do
+    get "sign_up", to: "devise/registrations#new"
+    get "sign_in", to: "devise/sessions#new"
+  end
 
   #root "users#index"
   #root 'sessions#new'
