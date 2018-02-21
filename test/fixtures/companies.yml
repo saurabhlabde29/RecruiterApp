@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_id: MyString
+  company_name: MyString
+  website: MyString
+  headquaters: MyString
+  size: MyString
+  founded: 1
+  industry: MyString
+  revenue: 1
+  synopsys: MyText
+
+two:
+  company_id: MyString
+  company_name: MyString
+  website: MyString
+  headquaters: MyString
+  size: MyString
+  founded: 1
+  industry: MyString
+  revenue: 1
+  synopsys: MyText

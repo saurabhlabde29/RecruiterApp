@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180221012333) do
+ActiveRecord::Schema.define(version: 20180221034918) do
 
   create_table "applications", force: :cascade do |t|
     t.string "application_id"
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 20180221012333) do
     t.string "type"
     t.string "name"
     t.string "user_type"
+    t.integer "phone"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
