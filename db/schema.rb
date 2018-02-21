@@ -56,7 +56,6 @@ ActiveRecord::Schema.define(version: 20180221034918) do
     t.text "requirements"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "company_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -72,7 +71,6 @@ ActiveRecord::Schema.define(version: 20180221034918) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "type"
     t.string "name"
     t.string "user_type"
     t.integer "phone"

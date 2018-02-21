@@ -6,9 +6,10 @@ class ApplicationController < ActionController::Base
     @user_t = current_user
     #@user_type.user_type.to_s = "Recruiter"
     if  @user_t.user_type.to_s == "Recruiter"
-      jobs_path
-    else
+        recruiters_show_path
+    elsif @user_t.user_type.to_s == "Applicant"
       homes_path
+    else
     end
   end
 

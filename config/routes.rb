@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'applicants/new'
+
+  get 'applicants/index'
+
+  get 'applicants/show'
+
+  get 'recruiters/new'
+
+  get 'recruiters/index'
+
+  get 'recruiters/show'
+
   resources :applications
   resources :jobs
   resources :companies
