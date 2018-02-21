@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180220230017) do
+ActiveRecord::Schema.define(version: 20180221012333) do
 
   create_table "applications", force: :cascade do |t|
     t.string "application_id"
-    t.string "user_id"
     t.string "current_company"
     t.string "linkedin_url"
     t.string "portfolio_url"
@@ -28,7 +27,6 @@ ActiveRecord::Schema.define(version: 20180220230017) do
   end
 
   create_table "companies", force: :cascade do |t|
-    t.string "company_id"
     t.string "company_name"
     t.string "website"
     t.string "headquaters"
@@ -39,6 +37,7 @@ ActiveRecord::Schema.define(version: 20180220230017) do
     t.text "synopsys"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "company_id"
   end
 
   create_table "homes", force: :cascade do |t|
@@ -51,13 +50,13 @@ ActiveRecord::Schema.define(version: 20180220230017) do
 
   create_table "jobs", force: :cascade do |t|
     t.string "job_id"
-    t.string "company_id"
     t.text "job_description"
     t.string "employment_type"
     t.text "responsibilities"
     t.text "requirements"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "company_id"
   end
 
   create_table "users", force: :cascade do |t|

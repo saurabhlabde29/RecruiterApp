@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :companies
   resources :applications
   resources :jobs
+  resources :companies
   resources :homes
   resource :jobs
   devise_scope :user do
