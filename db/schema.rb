@@ -10,12 +10,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180220203332) do
+ActiveRecord::Schema.define(version: 20180220230017) do
+
+  create_table "applications", force: :cascade do |t|
+    t.string "application_id"
+    t.string "user_id"
+    t.string "current_company"
+    t.string "linkedin_url"
+    t.string "portfolio_url"
+    t.text "additional_info"
+    t.string "gender"
+    t.string "race"
+    t.string "veteran_status"
+    t.string "disability_status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "companies", force: :cascade do |t|
+    t.string "company_id"
+    t.string "company_name"
+    t.string "website"
+    t.string "headquaters"
+    t.string "size"
+    t.integer "founded"
+    t.string "industry"
+    t.integer "revenue"
+    t.text "synopsys"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "homes", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.string "job_id"
+    t.string "company_id"
+    t.text "job_description"
+    t.string "employment_type"
+    t.text "responsibilities"
+    t.text "requirements"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
